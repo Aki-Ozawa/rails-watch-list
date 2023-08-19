@@ -1,3 +1,32 @@
 .movie-img{
   width: 200px;
 }
+
+form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  input{
+    height: 40px;
+  }
+  input[type="submit"]{
+     background-color: green;
+  }
+
+}
+.card {
+  height: 250px;
+  width: 270px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pictogram_35mm_film_1_frame.svg/2587px-Pictogram_35mm_film_1_frame.svg.png");
+  background-size: cover;
+}

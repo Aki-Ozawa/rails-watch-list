@@ -8,15 +8,7 @@
 require "json"
 require "open-uri"
 
-
-
 url = "https://api.themoviedb.org/3/movie/top_rated?api_key=#{ENV['API_KEY_TMDB']}"
-
-
-
-Bookmark.destroy_all
-Movie.destroy_all
-List.destroy_all
 
 connect = URI.open(url).read
 parsed_json  = JSON.parse(connect)
@@ -27,4 +19,9 @@ parsed_json["results"].each do |movie|
     Movie.create({title: movie["title"], overview: movie["overview"] , poster_url: "#{base_poster_url}#{movie['poster_path']}"})
 end
 
+
+List.create(name: "action")
+List.create(name: "horror")
+List.create(name: "drama" )
+List.create(name: "fantasy")
 puts "Hai ! Owari da :D"
